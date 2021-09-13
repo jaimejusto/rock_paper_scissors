@@ -7,7 +7,7 @@ function computerPlay() {
     const randomIndex = Math.floor((Math.random() * 10) % 3);
     const computerChoice = choices[randomIndex];
     return computerChoice;
-};
+}
 
 function playRound(playerMove, computerMove) {
     let winner;
@@ -27,7 +27,7 @@ function playRound(playerMove, computerMove) {
 
     return winner;
 
-};
+}
 
 function announceWinner(winner, playerSelection, computerSelection) {
     const playerTiedMsg = `You Tied! computer also chose ${playerSelection}`;
@@ -36,7 +36,7 @@ function announceWinner(winner, playerSelection, computerSelection) {
     const announcementMsgs = [playerTiedMsg, playerWonMsg, playerLostMsg];
 
     return announcementMsgs[winner];
-};
+}
 
 function validatePlayerInput(playerMove) {
     playerMove = playerMove.toLowerCase();
@@ -46,7 +46,7 @@ function validatePlayerInput(playerMove) {
     }
 
     return playerMove;
-};
+}
 
 function game() {
     let playerScore = 0;
@@ -88,4 +88,11 @@ function game() {
     } else {
         console.log("Computer Wins!");
     }
+}
+
+export { computerPlay,
+         playRound, 
+         announceWinner,
+         PLAYER,
+         COMPUTER
 };
